@@ -1,0 +1,119 @@
+.faq {
+  padding: 0 0 112px 0;
+}
+.faq h2 { 
+  font-size: 46px;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+.faq .wrapper{
+  padding: 0;
+}
+.faq-item {
+  border-bottom: 1px solid #a3a3a3;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+}
+.faq-icon:hover {
+    background: #ff5330;
+}
+.faq-icon:hover span{
+    background-color: #fff;
+}
+.faq-question span {
+    font-size: 28px;
+    color: #000;
+    font-family: "Outfit", sans-serif;
+    text-align: left;
+}
+.faq-question {
+  position: relative;
+  width: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  overflow: hidden;
+}
+.faq-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #dfd8d1;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  z-index: 0;
+}
+.faq-title {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: #000;
+}
+.faq-icon {
+  position: relative;
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  margin-left: 40px;
+  background: #fff;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faq-icon span {
+  position: absolute;
+  background: #000;
+}
+.faq-icon span:first-child {
+  width: 24px;
+  height: 1px;
+}
+
+.faq-icon span:last-child {
+  width: 1px;
+  height: 24px;
+}
+.faq-item.active .faq-answer {
+  max-height: 400px;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+    background-color: #292929;
+  transition: max-height .6s ease, padding .6s ease;
+}
+.faq-answer p {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 850px;
+  color: #fff;
+  padding: 60px 96px;
+}
+.faq-item:hover .faq-icon {
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+.faq-title,
+.faq-icon {
+  will-change: transform;
+}
+
+.faq-bg,
+.faq-answer,
+.faq-answer p {
+  will-change: transform, opacity, height;
+}

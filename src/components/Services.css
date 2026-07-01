@@ -1,0 +1,128 @@
+.services {
+    width: 100%;
+}
+
+.services .tabs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.services .tab-item {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.services .tab-item button {
+    background: none;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    font-family: "Outfit", sans-serif;
+    transition: color 0.3s ease;
+}
+
+.services .tab-item button.active {
+    color: #000;
+
+}
+
+.services .active-bg {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 48px;
+    background: #f7d9d4;
+    border: 1px solid #ff7d62;
+    border-radius: 16px;
+    pointer-events: none; 
+    z-index: 1;
+    will-change: transform, width;
+}
+
+.services .slider {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden; 
+}
+
+.services .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: none; 
+}
+
+.services .slide.active {
+    display: flex;
+}
+
+.services .left {
+    flex: 0 0 50%;
+    width: 50%;
+    height: 100%;
+}
+
+.services .right {
+    flex: 0 0 50%;
+    width: 50%;
+    height: 100%;
+    background: #141414;
+}
+
+.image-wrapper, .content-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-inner {
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    overflow: hidden;
+}
+
+.image-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.content-inner {
+    width: 100%;
+    height: 100%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    will-change: transform;
+    overflow: hidden;
+}
+
+.content-inner h2 {
+    font-size: 46px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.content-inner p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d9d9d9;
+}
